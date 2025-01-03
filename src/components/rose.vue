@@ -17,7 +17,7 @@ onMounted(() => {
   camera.position.set(0, 4.6, 3.6);  // 试试调整到 (0, 2, 10)
   camera.lookAt(0, 1, -1);  // 确保相机朝向场景中心
 
-  const renderer = new THREE.WebGLRenderer();
+  const renderer = new THREE.WebGLRenderer({antialias: true});
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.getElementById('app').appendChild(renderer.domElement);
 
